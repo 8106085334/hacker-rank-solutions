@@ -1,0 +1,43 @@
+solution:
+if __name__ == '__main__':
+    N = int(input())
+    new = []
+    for i in range(N):
+        method,*list_a = input().split()
+        if method == "insert":
+            a = list(map(int,list_a))
+            new.insert(a[0],a[1])
+        elif method == "print":
+            print(new)
+        elif method == "remove":
+            value = int(list_a[0])
+            new.remove(value)
+        elif method == "append":
+            value = int(list_a[0])
+            new.append(value)
+        elif method == "sort":
+            new.sort()
+        elif method == "pop":
+            new.pop()
+        if method == "reverse":
+            new.reverse()
+        
+sample input:
+12
+insert 0 5
+insert 1 10
+insert 0 6
+print
+remove 6
+append 9
+append 1
+sort
+print
+pop
+reverse
+print
+
+output:
+[6, 5, 10]
+[1, 5, 9, 10]
+[9, 5, 1]
